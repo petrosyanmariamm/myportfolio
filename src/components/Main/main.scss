@@ -1,0 +1,203 @@
+@import '/src/variables/variable.scss';
+@import '/src/mixins/mixin.scss';
+
+.main{
+    width: 100%;
+    height: 100%;
+    @include flex();
+    justify-content: space-between;
+    .leftBlock{
+        width: 60%;
+        height: 100vh;
+        @include flex();
+        align-items: flex-start;
+        flex-direction: column;
+        h2,h5,p{
+          color: $lightPink;
+        }
+        h2{
+            text-transform: capitalize;
+            font-weight: 700;
+            margin-left: 2rem;
+            font-size: 4rem;  
+        }
+        h5{
+            text-transform: capitalize;
+            margin-left: 2rem;
+            font-size: 2rem;
+            font-weight:500; 
+        }
+        p{
+            text-transform: capitalize;
+            margin-left: 2rem;
+            font-size: 3rem;  
+        }
+    }
+    .rightBlock{
+        background-color:$headerBgColor;
+        width: 20%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        text-align: center;
+        flex-direction: column;
+        padding-bottom: 1rem;
+            .img{
+                margin-top: 5rem;
+                width: 10rem;
+                height: 12rem;  
+                border-radius: 50%;
+                box-shadow: 8px 8px 2px 1px rgba(0, 0, 0, .2);
+                img{
+                  border-radius: 50%;
+                }
+              }
+              .text{
+                width: 70%;
+                text-transform: uppercase;
+                font-size: .9rem;
+                color: $lightPink;
+              }
+              .email{
+                font-size: .6rem;
+                color: $lightPink;
+                cursor: pointer;
+                &:hover{
+                  color:$hoverColor;
+                }
+              }
+              .number{
+                font-size: 1rem;
+                color: $lightPink;
+                cursor: pointer;
+                &:hover{
+                  color:$hoverColor;
+                }
+              }
+              
+              .socialLinks{
+                a{
+                  margin-left: .5rem;
+                  font-size: 1.5rem;
+                  cursor: pointer;
+                  svg{
+                    color: $lightPink;
+                    &:hover{
+                        color: $hoverColor;
+                  }
+                  
+                  }
+                }
+                
+              }
+              .btn{
+                margin-bottom: .8rem;
+              }
+        
+    }
+}
+
+
+@media screen and (max-width: 960px){
+    .main{
+      padding: 2rem 0;
+      .leftBlock{
+        width: 65%;
+      }
+        .rightBlock{
+          width: 35%;
+            .img{
+                width: 13rem;
+                height: 16rem;   
+              }
+              .text{
+                font-size: 1rem;
+              }
+               .number{
+                font-size: 1.3rem;
+              }
+              .email{
+                font-size: .7rem;
+              }
+              .socialLinks{
+                a{
+                  font-size: 1.2rem;
+                }
+                
+              }
+              
+        } 
+    }
+}
+@media screen and (max-width: 860px){
+    .main{
+      min-width: 100%;
+      min-height: 100%;
+        .leftBlock{
+            flex-grow: 1;
+            
+        }
+        .rightBlock{
+            flex-grow: 1;
+            .img{
+                width: 12rem;
+                height: 15rem;   
+              }
+              
+        }
+    }
+}
+@media screen and (max-width: 780px){
+  .main{
+    .leftBlock{
+      display: none;
+    }
+    .rightBlock{
+      background-color:transparent;
+      .text, .email, .number,.socialLinks>a>svg{
+        color:$headerBgColor;
+        font-size: 1.5rem;
+        font-weight: 900;
+        filter: drop-shadow(5px 2px 1px $lightPink) ;
+
+      }
+      p{
+        margin-bottom: 0;
+      }
+      
+    }
+   
+  }
+}
+
+@media screen and (max-width: 460px){
+    .main{
+        .leftBlock{
+            height: 60vh;
+            h5,h2,p{
+                font-size: 2rem;
+            }
+        } 
+        .rightBlock{
+          .img{
+              width: 12rem;
+              height: 15rem;   
+            }
+            .text,  .number{
+              font-size: 1.2rem;
+            }
+            .email{
+              font-size: 1rem;
+            }
+           
+            .socialLinks{
+              a{
+                font-size: 1.2rem;
+              }
+              
+            }
+      }
+    }
+}

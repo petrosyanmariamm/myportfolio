@@ -1,0 +1,95 @@
+
+@import '/src/variables/variable.scss';
+@import '/src/mixins/mixin.scss';
+
+.progress{
+    width: 100%;
+    height: 100%;
+    @include flex();
+    --bs-progress-bg:none;
+    .accordion{
+        width: 80%;
+        .accordion-item{
+            background-color:$headerBgColor;
+            .accordion-header{
+                .accordion-button{
+                    font-size: 1.5rem;
+                    background-color:white; 
+                    font-family: 'Pacifico'; 
+                    
+                }
+                  
+            }
+            .accordion-collapse{
+                .accordion-body{
+                    font-size: 1.2rem;
+                    color: $lightPink;
+                }
+                
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1170px){
+    .progress{
+        padding: 1rem;
+        .accordion{
+            width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 970px){
+    .progress{
+        .accordion{
+          .accordion-item{
+            .accordion-header{
+                .accordion-button{
+                    font-size: 1.3rem;
+                    padding: .7rem; 
+                }
+            }
+            .accordion-collapse{
+                .accordion-body{
+                    font-size: 1.1rem;
+                    padding: .5rem;
+                }
+            }
+          }
+        }
+    }
+}
+@media screen and (max-width: 690px){
+    .progress{
+        .accordion{
+          .accordion-item{
+            .accordion-header{
+                .accordion-button{
+                    font-size: 1.1rem;
+                    padding: .5rem; 
+                }
+            }
+            .accordion-collapse{
+                .accordion-body{
+                    font-size: 1rem;
+                }
+            }
+          }
+        }
+    }
+}
+@media screen and (max-width: 400px){
+    .progress{
+        .accordion{
+            .accordion-item{
+                .accordion-collapse{
+                    .accordion-body{
+                        font-size: .8rem;
+                    }
+                }
+            }
+           
+        }
+        
+    }
+}

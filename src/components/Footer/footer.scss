@@ -1,0 +1,75 @@
+@import '/src/variables/variable.scss';
+@import '/src/mixins/mixin.scss';
+
+footer{
+    width: 100%;
+    height: 90vh;
+    background-color: $headerBgColor;
+    text-align: center;
+    padding: 1rem;
+    @include flex();
+   p{
+    width: 100%;
+    font-size: 1.8rem;
+    color:  $lightSage;
+    font-family:'Pacifico';
+    margin-bottom: 1.3rem;
+    text-align: center;
+   }
+   .created{
+    display: flex;
+    p{
+      font-size: .8rem;
+    }
+    //  .logo{
+  //   width: 3rem;
+  //   height: 2rem;
+  // }
+   }
+  
+   .socialLinks{
+      a{
+        font-size: 1.5rem;
+        color:  $lightSage;
+        margin-right: .1rem;
+        &:hover{
+            color: $hoverColor;
+        }
+      }
+   }
+}
+@media screen and (max-width: 960px){
+  footer{
+    p{
+      font-size: 1.5rem;
+      margin-bottom: .8rem;
+    }
+   
+  }
+}
+@media screen and (max-width: 750px){
+  footer{
+    height:50vh;
+    padding: .5rem; 
+    flex-direction: column;
+  .socialLinks{
+    p{
+      display: none;
+    }
+  }
+  
+  }
+  
+}
+@media screen and (max-width: 460px){
+  footer{
+    padding: 0 .8rem;
+    p{
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      width: 100%;
+    }
+    
+  }
+  
+}

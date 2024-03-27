@@ -1,0 +1,8 @@
+@import '/src/variables/variable.scss';
+@import '/src/mixins/mixin.scss';
+
+.homePage{
+    height: 100vh;
+    width: 100%;
+    @include flex();
+}

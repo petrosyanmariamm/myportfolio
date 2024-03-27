@@ -1,0 +1,84 @@
+@import '/src/variables/variable.scss';
+@import '/src/mixins/mixin.scss';
+
+header{
+    width: 100%;
+    background-color:$headerBgColor;
+    @include flex();
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+   
+    .navbar{
+        .link{
+         font-size: 1rem;
+         font-weight: 600;
+         color:$lightPink;
+         text-decoration: none;
+         text-transform: uppercase;
+         margin-left: 1rem;
+        
+         &:hover{
+            color: $hoverColor;
+            filter: drop-shadow(5px 2px 10px $darkGray) ;
+
+         }
+       
+        
+         
+        }
+       
+        .active{
+            background-color:$sage;
+            color: $darkGray;
+            width: 100%;
+            margin-bottom: .5rem;
+            display: flex; 
+            flex-direction: column; 
+        }
+       
+    }
+   
+    
+    .burgerMenu{
+        font-size: 2rem;
+        color:$lightPink;
+        cursor: pointer;
+        display: none;
+        transition: .5s linear;
+        &:hover{
+            color: $hoverColor;
+            transition: .5s linear;
+        }
+    }
+    
+}
+@media screen and (max-width: 860px){
+   header{
+    .burgerMenu{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 50%;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .5s linear;
+       
+        .link{
+            padding: .5rem;
+            background-color:$sage;
+            color: $headerBgColor;
+            width: 100%;
+            border-radius: 3rem;
+        }
+         
+        }
+     .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100% );
+        transition: 1s linear;
+     }  
+    }
+   }
+

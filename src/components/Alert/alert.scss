@@ -1,0 +1,21 @@
+@import '../../mixins/mixin.scss';
+@import '../../variables/variable.scss';
+
+.alert{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 10rem;
+    background-color: $headerBgColor;
+    color: $lightPink;
+    h4{
+      font-size: 2rem;
+      font-family: 'Pacifico';
+    }
+   
+}
+@media screen and (max-width: 730px){
+    .alert{
+      min-width: 90%;
+    }
+}
