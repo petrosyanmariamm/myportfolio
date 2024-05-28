@@ -6,7 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { SiVercel } from "react-icons/si";
 import { MdOutlineMarkunread } from "react-icons/md";
 import { IoCall } from "react-icons/io5";
-import CV from "./CV.pdf";
+import CV from "./cv.pdf";
 
 export default function Main() {
   const [social] = useState([{icon:<FaLinkedinIn />, href:"https://www.linkedin.com/in/mariam-petrosyan-4a1453287/"},
